@@ -1,3 +1,31 @@
 *, *::after, *::before{
     box-sizing: border-box;
 }
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    width:100vw;
+    background-color:hsl(34, 73%, 49%);
+    
+    overflow: hidden;
+}
+.btn-group{
+
+    height: 100%;
+    width:100%;
+    
+}
+.btn-group button{
+    display: block;
+    margin: 4rem auto;
+    padding:.3rem .6rem;
+    font-size:1.3em;
+    background-color: hsl(55, 29%, 82%);
+    border:none;
+    outline:none;
+    position: relative;
+}
+.expend-border{
+
+}
