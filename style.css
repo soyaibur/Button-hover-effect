@@ -19,6 +19,7 @@ body{
 .btn-group button{
     --border-color:hsl(55, 29%, 82%);
     --border-size: 4px;
+    --accent-color: #069;
     display: block;
     margin: 4rem auto;
     padding:.3rem .6rem;
@@ -45,3 +46,39 @@ body{
     right:calc(-2 * var(--border-size));
     bottom:calc(-2 * var(--border-size));
 }
+
+
+
+
+
+
+
+/* this is the starting of slide background button */
+.btn-group .slide-background::before{
+    position: absolute;
+    content: "";
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: var(--accent-color);
+    z-index: -2;
+    cursor: pointer;
+    transition: transform 350ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.btn-group .slide-background:hover::before{
+    transform: scaleX(1);
+}
+
+.btn-group .slide-background{
+    transition: color 350ms ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn-group .slide-background:hover{
+    color:white;
+}
+
+/* This is the starting fo shrink background button */
