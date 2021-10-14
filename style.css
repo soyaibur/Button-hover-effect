@@ -9,20 +9,39 @@ body{
     background-color:hsl(34, 73%, 49%);
     
     overflow: hidden;
+
 }
 .btn-group{
-
     height: 100%;
     width:100%;
     
 }
 .btn-group button{
+    --border-color:hsl(55, 29%, 82%);
+    --border-size: 4px;
     display: block;
     margin: 4rem auto;
     padding:.3rem .6rem;
     font-size:1.3em;
-    background-color: hsl(55, 29%, 82%);
+    background-color: var(--border-color);
     border:none;
     outline:none;
     position: relative;
+}
+.btn-group .expend-border::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border: var(--border-size) solid var(--border-color);
+    transition: top, left, right, bottom, 350ms ease-in-out;
+}
+.btn-group .expend-border:hover::before,
+.btn-group .expend-border:focus::before{
+    top:calc(-2 * var(--border-size));
+    left:calc(-2 * var(--border-size));
+    right:calc(-2 * var(--border-size));
+    bottom:calc(-2 * var(--border-size));
 }
