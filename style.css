@@ -113,3 +113,27 @@ body{
 
 
 /* this is the starting of slide underline button */
+.btn-group .slide-underline::before{
+    position: absolute;
+    content: "";
+    left:0;
+    right:0;
+    bottom:0;
+    height:var(--border-size);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    transform: scaleX(0);
+    transform-origin:left;
+    transition: transform 350ms ease-in-out;
+}
+
+.btn-group .slide-underline:hover::before{
+    transform:scale(1);
+}
+.btn-group .slide-underline{
+    cursor: pointer;
+    transition: color 350ms ease-in-out;
+}
+.btn-group .slide-underline:hover{
+    color:var(--accent-color);
+}
