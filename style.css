@@ -62,7 +62,7 @@ body{
     right:0;
     bottom:0;
     background-color: var(--accent-color);
-    z-index: -2;
+    z-index: -1;
     cursor: pointer;
     transition: transform 350ms ease-in-out;
     transform: scaleX(0);
@@ -82,3 +82,34 @@ body{
 }
 
 /* This is the starting fo shrink background button */
+
+.btn-group .shrink-background::before{
+    position: absolute;
+    content: "";
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: var(--accent-color);
+    z-index: -1;
+    cursor: pointer;
+    transform: scale(1.5);
+    border-radius: 50%;
+    transition: transform 350ms ease-in-out;
+}
+.btn-group .shrink-background:hover::before{
+    transform:scale(0);
+}
+
+.btn-group .shrink-background{
+    transition: color 350ms ease-in-out;
+    color:white;
+    z-index: 1;
+    overflow:hidden;
+}
+.btn-group .shrink-background:hover{
+    color:var(--accent-color);
+}
+
+
+/* this is the starting of slide underline button */
